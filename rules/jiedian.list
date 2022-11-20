@@ -6178,3 +6178,7 @@ DOMAIN-SUFFIX,flzbcdn.xyz
 
 #华文电视
 DOMAIN-SUFFIX,ocnttv.com
+#远程端口
+DST-PORT,22
+DST-PORT,1022
+DST-PORT,23333
