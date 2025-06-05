@@ -1,5 +1,24 @@
+# NAME: OpenAI
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-05
+# DOMAIN: 8
+# DOMAIN-KEYWORD: 1
+# DOMAIN-SUFFIX: 26
+# IP-ASN: 1
+# IP-CIDR: 2
+# TOTAL: 38
+
+# DOMAIN规则
 DOMAIN,browser-intake-datadoghq.com
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,openai-api.arkoselabs.com
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
 DOMAIN,static.cloudflareinsights.com
+
+# DOMAIN-SUFFIX规则
 DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,algolia.net
 DOMAIN-SUFFIX,api.statsig.com
@@ -17,9 +36,21 @@ DOMAIN-SUFFIX,launchdarkly.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,observeit.net
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openaicom.imgix.net
 DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,turn.livekit.cloud
+
+# DOMAIN-KEYWORD规则
 DOMAIN-KEYWORD,openai
-DOMAIN-SUFFIX,sora.com
+
+# IP-CIDR规则
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
+
+# IP-ASN规则
+IP-ASN,20473,no-resolve
