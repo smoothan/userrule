@@ -130,6 +130,13 @@ dns:
      - aqqmusic.tc.qq.com
      - amobile.music.tc.qq.com
      - "*.xiami.com"
+     - "*.mi.com"
+     - "*.xiaomi.cn"
+     - "*.xiaomi.net"
+     - "*.mijia.tech"
+     - "*.mi-img.com"
+     - "*.miui.com"
+     - "*.miot-spec.org"
      - "*.music.migu.cn"
      - music.migu.cn
      - "*.msftconnecttest.com"
