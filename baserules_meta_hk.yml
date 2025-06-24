@@ -150,11 +150,12 @@ dns:
      - "*.ipv6.microsoft.com"
      - "*.*.xboxlive.com"
      - speedtest.cros.wr.pvp.net
-  default-nameserver:
-     - 1.1.1.1
-     - 8.8.4.4
+  # default-nameserver:
+  #    - 1.1.1.1
+  #    - 8.8.4.4
   nameserver:
      - 8.8.8.8 
+     - 223.5.5.5
      - https://dns.google/dns-query
      - https://1.1.1.1/dns-query
      - https://223.6.6.6/dns-query
