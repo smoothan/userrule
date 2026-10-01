@@ -150,32 +150,13 @@ dns:
      - "*.ipv6.microsoft.com"
      - "*.*.xboxlive.com"
      - speedtest.cros.wr.pvp.net
-  # default-nameserver:
-  #    - 1.1.1.1
-  #    - 8.8.4.4
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
   nameserver:
-     - 8.8.8.8 
-     - 223.5.5.5
-     - https://dns.google/dns-query
-     - https://1.1.1.1/dns-query
-     - https://223.6.6.6/dns-query
-  fallback:
-     - https://1.1.1.1/dns-query
-     - https://public.dns.iij.jp/dns-query
-     - tls://8.8.4.4
-  fallback-filter:
-     geoip: true # 默认
-     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
-       - 240.0.0.0/4
-       - 0.0.0.0/32
-       - 127.0.0.1/32
-     domain:
-       - +.google.com
-       - +.facebook.com
-       - +.twitter.com
-       - +.youtube.com
-       - +.xn--ngstr-lra8j.com
-       - +.google.cn
-       - +.googleapis.cn
-       - +.googleapis.com
-       - +.gvt1.com   
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+  proxy-server-nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
