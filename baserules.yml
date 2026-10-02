@@ -67,17 +67,16 @@ hosts:
 dns:
   enable: true # 是否启用dns false
   ipv6: false
-  listen: 0.0.0.0:8853
+  listen: 127.0.0.1:1053
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
     - 180.184.1.1
     - 114.114.114.114
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
-  #fake-ip-range: 198.18.0.1/16 #
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
      - '*.lan'
-     - localhost.ptlogin2.qq.com
      - stun.*.*.*
      - stun.*.*
      - time.windows.com
@@ -117,6 +116,15 @@ dns:
      - time2.google.com
      - time3.google.com
      - time4.google.com
+     - alt1-mtalk.google.com
+     - alt2-mtalk.google.com
+     - alt3-mtalk.google.com
+     - alt4-mtalk.google.com
+     - alt5-mtalk.google.com
+     - alt6-mtalk.google.com
+     - alt7-mtalk.google.com
+     - alt8-mtalk.google.com
+     - mtalk.google.com
      - music.163.com
      - "*.music.163.com"
      - "*.126.net"
@@ -137,14 +145,9 @@ dns:
      - aqqmusic.tc.qq.com
      - amobile.music.tc.qq.com
      - "*.xiami.com"
-     - "*.mi.com"
-     - "*.xiaomi.cn"
-     - "*.xiaomi.net"
-     - "*.mijia.tech"
-     - "*.mi-img.com"
-     - "*.miui.com"
-     - "*.miot-spec.org"
      - "*.music.migu.cn"
+     - weatherapi.market.xiaomi.com
+     - wtradv.market.xiaomi.com
      - music.migu.cn
      - "*.msftconnecttest.com"
      - "*.msftncsi.com"
@@ -155,32 +158,12 @@ dns:
      - "*.ipv6.microsoft.com"
      - "*.*.xboxlive.com"
      - speedtest.cros.wr.pvp.net
+     - api.minecraftservices.com
+     - sessionserver.mojang.com
   nameserver:
     - https://dns.alidns.com/dns-query
     - tls://dns.alidns.com
     - https://doh.pub/dns-query
     - tls://dot.pub
-  fallback:
-    - https://dns.alidns.com/dns-query
-    - tls://dns.alidns.com
-    - https://doh.pub/dns-query
-    - tls://dot.pub
-  proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  fallback-filter:
-     geoip: true # 默认
-     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
-       - 240.0.0.0/4
-       - 0.0.0.0/32
-       - 127.0.0.1/32
-     domain:
-       - +.google.com
-       - +.facebook.com
-       - +.twitter.com
-       - +.youtube.com
-       - +.xn--ngstr-lra8j.com
-       - +.google.cn
-       - +.googleapis.cn
-       - +.googleapis.com
-       - +.gvt1.com   
+  nameserver-policy:
+    geosite:cn,private,steam@cn,apple@cn,microsoft@cn,apple-cn,category-games@cn: 119.29.29.29
